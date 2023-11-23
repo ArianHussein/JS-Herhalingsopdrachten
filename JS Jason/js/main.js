@@ -6,7 +6,7 @@ const person = `
 }
 `;
 
-const objPerson  = JSON.parse(person);
+const objPerson = JSON.parse(person);
 console.log("Firstname is: ", objPerson.firstname);
 console.log("Email is: ", objPerson.email);
 
@@ -107,7 +107,7 @@ const text2 = `
   }
   `;
 
-  const objtext2 = JSON.parse(text2)
+const objtext2 = JSON.parse(text2)
 console.log("ID is: ", objtext2.id);
 console.log("PostID is: ", objtext2.postId);
 console.log("UserID is: ", objtext2.userId);
@@ -138,10 +138,82 @@ const text3 = `
   ]
   `;
 
-  const objtext3 = JSON.parse(text3)
-for (let i = 0; index < text3.length; index++) {
-    const element = text3[index];
-    
+const objtext3 = JSON.parse(text3);
+
+for (var i = 0; i < objtext3.length; i++) {
+  console.log(objtext3[i].comment);
 }
+
+//Opdracht 6
+
+
+const text4 = '[{"albumId":1,"id":1,"title":"accusamus beatae ad facilis cum similique qui sunt","url":"https://via.placeholder.com/600/92c952","thumbnailUrl":"https://via.placeholder.com/150/92c952"},{"albumId":1,"id":2,"title":"reprehenderit est deserunt velit ipsam","url":"https://via.placeholder.com/600/771796","thumbnailUrl":"https://via.placeholder.com/150/771796"},{"albumId":1,"id":3,"title":"officia porro iure quia iusto qui ipsa ut modi","url":"https://via.placeholder.com/600/24f355","thumbnailUrl":"https://via.placeholder.com/150/24f355"},{"albumId":1,"id":4,"title":"culpa odio esse rerum omnis laboriosam voluptate repudiandae","url":"https://via.placeholder.com/600/d32776","thumbnailUrl":"https://via.placeholder.com/150/d32776"},{"albumId":1,"id":5,"title":"natus nisi omnis corporis facere molestiae rerum in","url":"https://via.placeholder.com/600/f66b97","thumbnailUrl":"https://via.placeholder.com/150/f66b97"},{"albumId":1,"id":6,"title":"accusamus ea aliquid et amet sequi nemo","url":"https://via.placeholder.com/600/56a8c2","thumbnailUrl":"https://via.placeholder.com/150/56a8c2"}]';
+
+
+const photoData = JSON.parse(text4);
+
+let photoListHTML = '<ul>';
+
+
+for (let i = 0; i < photoData.length; i++) {
+  photoListHTML += `<li>${photoData[i].title} - ${photoData[i].url}</li>`;
+}
+
+
+photoListHTML += '</ul>';
+
+document.body.innerHTML = photoListHTML;
+
+//Opdracht 7
+
+const student = {
+  name: 'John',
+  age: 20,
+  marks: {
+    science: 70,
+    math: 75
+  }
+};
+
+
+const text5 = JSON.stringify(student);
+console.log(text5);
+
+//Opdracht 8
+
+// Het gegeven JavaScript-array van objecten
+const students = [
+  {
+    name: 'Wolverine',
+    age: 38,
+    marks: {
+      science: 20,
+      math: 15
+    }
+  },
+  {
+    name: 'Xavier',
+    age: 64,
+    marks: {
+      science: 95,
+      math: 90
+    }
+  },
+  {
+    name: 'Magneto',
+    age: 68,
+    marks: {
+      science: 90,
+      math: 85
+    }
+  }
+];
+
+
+const text6 = JSON.stringify(students);
+console.log(text6);
+
+
+
 
 
