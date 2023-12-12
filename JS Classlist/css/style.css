@@ -1,0 +1,42 @@
+/* .box{
+border: 1px solid black;
+}
+
+.bg-aqua{
+    background-color: aqua;
+}
+
+.border-red{
+border: 2px solid red;
+} */
+
+/* .box{
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.error{
+    border: 1px solid red;
+} */
+
+.animate-box{
+    width: 200px;
+    height: 80px;
+   border: 2px solid black;
+}
+
+
+
+.blinker {
+    animation: flash 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes flash {
+    from {
+        background-color: white;
+}
+to { 
+    background-color: tomato;
+}
+} 
